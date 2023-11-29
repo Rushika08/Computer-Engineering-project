@@ -40,7 +40,7 @@ const AdminSideBar = ({ active }) => {
               active === 2 ? "text-[crimson]" : "text-[#555]"
             }`}
           >
-            All Orders
+            All Transactions
           </h5>
         </Link>
       </div>
@@ -56,7 +56,7 @@ const AdminSideBar = ({ active }) => {
               active === 3 ? "text-[crimson]" : "text-[#555]"
             }`}
           >
-            All Sellers
+            All Collectors
           </h5>
         </Link>
       </div>
@@ -88,7 +88,7 @@ const AdminSideBar = ({ active }) => {
               active === 5 ? "text-[crimson]" : "text-[#555]"
             }`}
           >
-            All Products
+            All Advertistments
           </h5>
         </Link>
       </div>
@@ -111,7 +111,7 @@ const AdminSideBar = ({ active }) => {
 
 
 
-      <div className="w-full flex items-center p-4">
+      {/*<div className="w-full flex items-center p-4">
         <Link
           to="/admin-withdraw-request"
           className="w-full flex items-center"
@@ -128,7 +128,7 @@ const AdminSideBar = ({ active }) => {
             Withdraw Request
           </h5>
         </Link>
-      </div>
+          </div>*/}
 
       <div className="w-full flex items-center p-4">
         <Link

@@ -20,6 +20,14 @@ export const navItems = [
       title: "FAQ",
       url: "/faq",
     },
+	  {
+      title: "About Us",
+      url: "/aboutUs",
+    },
+    {
+      title: "Learn",
+      url: "/learnPage",
+    },
   ];
   
   // branding data
@@ -593,7 +601,7 @@ export const navItems = [
   export const footerProductLinks = [
     {
       name: "About us",
-      link: "/about"
+      link: "/aboutUs"
     },
     {
       name: "Careers",

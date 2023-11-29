@@ -32,7 +32,7 @@ const AllSellers = () => {
   };
 
   const columns = [
-    { field: "id", headerName: "Seller ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Collector ID", minWidth: 150, flex: 0.7 },
 
     {
       field: "name",
@@ -49,7 +49,7 @@ const AllSellers = () => {
     },
     {
       field: "address",
-      headerName: "Seller Address",
+      headerName: "Collector Address",
       type: "text",
       minWidth: 130,
       flex: 0.7,
@@ -85,7 +85,7 @@ const AllSellers = () => {
       field: " ",
       flex: 1,
       minWidth: 150,
-      headerName: "Delete Seller",
+      headerName: "Delete Collector",
       type: "number",
       sortable: false,
       renderCell: (params) => {

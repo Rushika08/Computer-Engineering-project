@@ -10,10 +10,13 @@ import {
   BestSellingPage,
   EventsPage,
   FAQPage,
+  AboutUs,
+  LearnPage,
   CheckoutPage,
   PaymentPage,
   OrderSuccessPage,
   ProductDetailsPage,
+  EventDetailsPage,
   ProfilePage,
   ShopCreatePage,
   SellerActivationPage,
@@ -44,7 +47,7 @@ import {
   AdminDashboardOrders,
   AdminDashboardProducts,
   AdminDashboardEvents,
-  AdminDashboardWithdraw
+  AdminDashboardWithdraw,
 } from "./routes/AdminRoutes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -60,6 +63,7 @@ import axios from "axios";
 import { server } from "./server";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import GoogleMapEmbed from "./components/Shop/GoogleMapEmbed";
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -108,7 +112,10 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/best-selling" element={<BestSellingPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/event/:id" element={<EventDetailsPage />} />
         <Route path="/faq" element={<FAQPage />} />
+		    <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/learnPage" element={<LearnPage />} />
         <Route
           path="/checkout"
           element={
@@ -259,6 +266,15 @@ const App = () => {
             </SellerProtectedRoute>
           }
         />
+        {/* <Route
+          path="/dashboard-collecting-points"
+          element={
+            <SellerProtectedRoute>
+              <ShopCollectingPoints />
+            </SellerProtectedRoute>
+          }
+        /> */}
+
         {/* Admin Routes */}
         <Route
           path="/admin/dashboard"
@@ -292,7 +308,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
-         <Route
+        <Route
           path="/admin-products"
           element={
             <ProtectedAdminRoute>
@@ -300,7 +316,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
-         <Route
+        <Route
           path="/admin-events"
           element={
             <ProtectedAdminRoute>
@@ -308,7 +324,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
-         <Route
+        <Route
           path="/admin-withdraw-request"
           element={
             <ProtectedAdminRoute>
@@ -316,6 +332,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
+        <Route path="/GoogleMapEmbed" element={<GoogleMapEmbed />} />
       </Routes>
       <ToastContainer
         position="bottom-center"

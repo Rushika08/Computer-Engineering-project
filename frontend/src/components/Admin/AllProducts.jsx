@@ -21,7 +21,7 @@ const AllProducts = () => {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "Product Id", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Advertistment Id", minWidth: 150, flex: 0.7 },
     {
       field: "name",
       headerName: "Name",
@@ -35,18 +35,9 @@ const AllProducts = () => {
       flex: 0.6,
     },
     {
-      field: "Stock",
-      headerName: "Stock",
-      type: "number",
-      minWidth: 80,
-      flex: 0.5,
-    },
-
-    {
-      field: "sold",
-      headerName: "Sold out",
-      type: "number",
-      minWidth: 130,
+      field: "points",
+      headerName: "Points",
+      minWidth: 100,
       flex: 0.6,
     },
     {
@@ -77,9 +68,8 @@ const AllProducts = () => {
       row.push({
         id: item._id,
         name: item.name,
-        price: "US$ " + item.discountPrice,
-        Stock: item.stock,
-        sold: item?.sold_out,
+        price: "Rs. " + item.originalPrice,
+        points: item.discountPrice,
       });
     });
 

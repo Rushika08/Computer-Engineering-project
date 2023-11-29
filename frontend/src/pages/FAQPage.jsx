@@ -36,7 +36,7 @@ const Faq = () => {
             onClick={() => toggleTab(2)}
           >
             <span className="text-lg font-medium text-gray-900">
-              What is your return policy?
+              How can I handover my waste?
             </span>
             {activeTab === 2 ? (
               <svg
@@ -71,10 +71,10 @@ const Faq = () => {
           {activeTab === 2 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                If you're not satisfied with your purchase, we accept returns
-                within 30 days of delivery. To initiate a return, please email
-                us at support@myecommercestore.com with your order number and a
-                brief explanation of why you're returning the item.
+                You can browse advertisements of waste collectors' from this
+                website and you can contact them through their contact
+                information or you can drop a message to their inbox using the
+                chat option.
               </p>
             </div>
           )}
@@ -86,7 +86,7 @@ const Faq = () => {
             onClick={() => toggleTab(3)}
           >
             <span className="text-lg font-medium text-gray-900">
-              How do I track my order?
+              What happens to the plastic collected?
             </span>
             {activeTab === 3 ? (
               <svg
@@ -121,9 +121,12 @@ const Faq = () => {
           {activeTab === 3 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                You can track your order by clicking the tracking link in your
-                shipping confirmation email, or by logging into your account on
-                our website and viewing the order details.
+                We have partnered with SriLanka Recyclers Association who
+                ensures that the personals that been registered with us will
+                collect the plastic waste from our bins. Then EcoSmart will
+                either sell these plastic bottles to plastic recycler buyers or
+                EcoSmart itself will recycle these plastic bottles to
+                manufacture new products from the recycled plastic bottles.
               </p>
             </div>
           )}
@@ -171,8 +174,8 @@ const Faq = () => {
             <div className="mt-4">
               <p className="text-base text-gray-500">
                 You can contact our customer support team by emailing us at
-                support@myecommercestore.com, or by calling us at (555) 123-4567
-                between the hours of 9am and 5pm EST, Monday through Friday.
+                support@ecosmart.com, or by calling us at 011-2345678 between
+                the hours of 9am and 5pm, Monday through Friday.
               </p>
             </div>
           )}
@@ -184,7 +187,8 @@ const Faq = () => {
             onClick={() => toggleTab(5)}
           >
             <span className="text-lg font-medium text-gray-900">
-              Can I change or cancel my order?
+              Do you accept recyclable items other than plastic bottles, such as
+              glass, e-waste or aluminium?
             </span>
             {activeTab === 5 ? (
               <svg
@@ -219,10 +223,8 @@ const Faq = () => {
           {activeTab === 5 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                Unfortunately, once an order has been placed, we are not able to
-                make changes or cancellations. If you no longer want the items
-                you've ordered, you can return them for a refund within 30 days
-                of delivery.
+                Unfortunately no, currently EcoSmart does not accept any other
+                recyclable plastic waste.
               </p>
             </div>
           )}
@@ -234,7 +236,8 @@ const Faq = () => {
             onClick={() => toggleTab(6)}
           >
             <span className="text-lg font-medium text-gray-900">
-              Do you offer international shipping?
+              How do I report a problem or an issue about the recycle bins
+              located at sites or about collectors?
             </span>
             {activeTab === 6 ? (
               <svg
@@ -269,7 +272,9 @@ const Faq = () => {
           {activeTab === 6 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                Currently, we only offer shipping within the United States.
+                You are able to send a feedback via an email or you are able to
+                contact our team members over the phone. Please do feel
+                comfortable to reach out to us to give your feedbacks.
               </p>
             </div>
           )}
@@ -281,7 +286,7 @@ const Faq = () => {
             onClick={() => toggleTab(7)}
           >
             <span className="text-lg font-medium text-gray-900">
-              What payment methods do you accept?
+              Can I become an collector at EcoSmart?
             </span>
             {activeTab === 7 ? (
               <svg
@@ -316,8 +321,9 @@ const Faq = () => {
           {activeTab === 7 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                We accept visa,mastercard,paypal payment method also we have
-                cash on delivery system.
+                Yes, you can. You can send your request via an email or you are
+                able to contact our team members over the phone for further
+                details.
               </p>
             </div>
           )}

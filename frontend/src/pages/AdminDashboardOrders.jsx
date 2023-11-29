@@ -17,7 +17,7 @@ const AdminDashboardOrders = () => {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Transaction ID", minWidth: 150, flex: 0.7 },
 
     {
       field: "status",
@@ -32,7 +32,7 @@ const AdminDashboardOrders = () => {
     },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Qty",
       type: "number",
       minWidth: 130,
       flex: 0.7,
@@ -47,7 +47,7 @@ const AdminDashboardOrders = () => {
     },
     {
         field: "createdAt",
-        headerName: "Order Date",
+        headerName: "Date",
         type: "number",
         minWidth: 130,
         flex: 0.8,

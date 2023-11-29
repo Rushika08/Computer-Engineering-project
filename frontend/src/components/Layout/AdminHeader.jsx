@@ -10,12 +10,14 @@ const AdminHeader = () => {
     const {user} = useSelector((state) => state.user);
 
   return (
-         <div className="w-full h-[80px] bg-white shadow sticky top-0 left-0 z-30 flex items-center justify-between px-4">
+         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
       <div>
         <Link to="/">
           <img
             src="https://ecosmart.lk/wp-content/uploads/2023/05/logo-4.1.png"
             alt=""
+            width="300" 
+            height="200" 
           />
         </Link>
       </div>

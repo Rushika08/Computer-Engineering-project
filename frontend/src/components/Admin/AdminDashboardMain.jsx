@@ -27,7 +27,7 @@ const AdminDashboardMain = () => {
    const adminBalance = adminEarning?.toFixed(2);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Transaction ID", minWidth: 150, flex: 0.7 },
 
     {
       field: "status",
@@ -42,7 +42,7 @@ const AdminDashboardMain = () => {
     },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Qty",
       type: "number",
       minWidth: 130,
       flex: 0.7,
@@ -57,7 +57,7 @@ const AdminDashboardMain = () => {
     },
     {
       field: "createdAt",
-      headerName: "Order Date",
+      headerName: "Date",
       type: "number",
       minWidth: 130,
       flex: 0.8,
@@ -70,7 +70,7 @@ const AdminDashboardMain = () => {
       row.push({
         id: item._id,
         itemsQty: item?.cart?.reduce((acc, item) => acc + item.qty, 0),
-        total: item?.totalPrice + " $",
+        total: item?.totalPrice,
         status: item?.status,
         createdAt: item?.createdAt.slice(0,10),
       });
@@ -95,10 +95,10 @@ const AdminDashboardMain = () => {
               <h3
                 className={`${styles.productTitle} !text-[18px] leading-5 !font-[400] text-[#00000085]`}
               >
-                Total Earning
+                Total Transactions
               </h3>
             </div>
-            <h5 className="pt-2 pl-[36px] text-[22px] font-[500]">$ {adminBalance}</h5>
+            <h5 className="pt-2 pl-[36px] text-[22px] font-[500]"> {adminBalance}</h5>
           </div>
   
           <div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
@@ -107,16 +107,16 @@ const AdminDashboardMain = () => {
               <h3
                 className={`${styles.productTitle} !text-[18px] leading-5 !font-[400] text-[#00000085]`}
               >
-                All Sellers
+                All Collectors
               </h3>
             </div>
             <h5 className="pt-2 pl-[36px] text-[22px] font-[500]">{sellers && sellers.length}</h5>
             <Link to="/admin-sellers">
-              <h5 className="pt-4 pl-2 text-[#077f9c]">View Sellers</h5>
+              <h5 className="pt-4 pl-2 text-[#077f9c]">View Collectors</h5>
             </Link>
           </div>
   
-          <div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
+          {/*<div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
             <div className="flex items-center">
               <AiOutlineMoneyCollect
                 size={30}
@@ -133,11 +133,11 @@ const AdminDashboardMain = () => {
             <Link to="/admin-orders">
               <h5 className="pt-4 pl-2 text-[#077f9c]">View Orders</h5>
             </Link>
-          </div>
+          </div>*/}
         </div>
   
         <br />
-        <h3 className="text-[22px] font-Poppins pb-2">Latest Orders</h3>
+        <h3 className="text-[22px] font-Poppins pb-2">Latest Transactions</h3>
         <div className="w-full min-h-[45vh] bg-white rounded">
           <DataGrid
             rows={row}

@@ -17,9 +17,6 @@ const CreateEvent = () => {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [tags, setTags] = useState("");
-  const [originalPrice, setOriginalPrice] = useState();
-  const [discountPrice, setDiscountPrice] = useState();
-  const [stock, setStock] = useState();
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
@@ -88,9 +85,6 @@ const CreateEvent = () => {
       description,
       category,
       tags,
-      originalPrice,
-      discountPrice,
-      stock,
       images,
       shopId: seller._id,
       start_Date: startDate?.toISOString(),
@@ -138,21 +132,19 @@ const CreateEvent = () => {
         <br />
         <div>
           <label className="pb-2">
-            Category <span className="text-red-500">*</span>
+            Event Type <span className="text-red-500">*</span>
           </label>
-          <select
-            className="w-full mt-2 border h-[35px] rounded-[5px]"
+          <input
+            cols="30"
+            required
+            rows="8"
+            type="text"
+            name="type"
             value={category}
+            className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="Choose a category">Choose a category</option>
-            {categoriesData &&
-              categoriesData.map((i) => (
-                <option value={i.title} key={i.title}>
-                  {i.title}
-                </option>
-              ))}
-          </select>
+            placeholder="Enter your event type..."
+          />
         </div>
         <br />
         <div>
@@ -169,7 +161,7 @@ const CreateEvent = () => {
         <br />
         <div>
           <label className="pb-2">
-            Event Start Date <span className="text-red-500">*</span>
+            Event Date <span className="text-red-500">*</span>
           </label>
           <input
             type="date"
@@ -182,65 +174,6 @@ const CreateEvent = () => {
           />
         </div>
         <br />
-
-        <div>
-          <label className="pb-2">
-            Event End Date <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="date"
-            name="price"
-            id="start-date"
-            value={endDate ? endDate.toISOString().slice(0, 10) : ""}
-            className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            onChange={handleEndDateChange}
-            min={minEndDate}
-            placeholder="Enter your event product stock..."
-          />
-        </div>
-
-        <br />
-        <div>
-          <label className="pb-2">Original Price</label>
-          <input
-            type="number"
-            name="price"
-            value={originalPrice}
-            className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            onChange={(e) => setOriginalPrice(e.target.value)}
-            placeholder="Enter your event product price..."
-          />
-        </div>
-        <br />
-        <div>
-          <label className="pb-2">
-            Price (With Discount) <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="number"
-            name="price"
-            value={discountPrice}
-            className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            onChange={(e) => setDiscountPrice(e.target.value)}
-            placeholder="Enter your event product price with discount..."
-          />
-        </div>
-        <br />
-        <div>
-          <label className="pb-2">
-            Product Stock <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="number"
-            name="price"
-            value={stock}
-            className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            onChange={(e) => setStock(e.target.value)}
-            placeholder="Enter your event product stock..."
-          />
-        </div>
-        <br />
-        
         
         <br />
         <div>

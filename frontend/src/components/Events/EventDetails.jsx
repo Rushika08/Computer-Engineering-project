@@ -20,7 +20,7 @@ import Ratings from "./Ratings";
 import axios from "axios";
 import GoogleMapEmbed from "../Shop/GoogleMapEmbed";
 
-const ProductDetails = ({ data }) => {
+const EventDetails = ({ data }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
   const { cart } = useSelector((state) => state.cart);
   const { user, isAuthenticated } = useSelector((state) => state.user);
@@ -57,21 +57,6 @@ const ProductDetails = ({ data }) => {
   const addToWishlistHandler = (data) => {
     setClick(!click);
     dispatch(addToWishlist(data));
-  };
-
-  const addToCartHandler = (id) => {
-    const isItemExists = cart && cart.find((i) => i._id === id);
-    if (isItemExists) {
-      toast.error("Item already in cart!");
-    } else {
-      if (data.stock < 1) {
-        toast.error("Product stock limited!");
-      } else {
-        const cartData = { ...data, qty: count };
-        dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
-      }
-    }
   };
 
   const totalReviewsLength =
@@ -149,14 +134,13 @@ const ProductDetails = ({ data }) => {
               </div>
               <div className="w-full 800px:w-[50%] pt-5">
                 <h1 className={`${styles.productTitle}`}>{data.name}</h1>
-                <p>{data.description}</p>
                 <div className="flex pt-3">
-                <h4 className={`${styles.productDiscountPrice}`}>
-                    Rs.{data.originalPrice}
-                  </h4>
-                  <h3 className={`${styles.price}`}>
-                    {data.originalPrice ? data.discountPrice + " points per unit" : null}
-                  </h3>
+                <h5 className="font-[500] text-[18px] text-[#d55b45] pr-3">
+                    {data.category}
+                </h5>
+                <h5 className="font-bold text-[20px] text-[#333] font-Roboto">
+                    {data.tags}
+                </h5>
                 </div>
 
                 <div className="flex items-center mt-12 justify-between pr-3">
@@ -277,32 +261,6 @@ const ProductDetailsInfo = ({
             <div className={`${styles.active_indicator}`} />
           ) : null}
         </div>
-        <div className="relative">
-          <h5
-            className={
-              "text-[#000] text-[18px] px-1 leading-5 font-[600] cursor-pointer 800px:text-[20px]"
-            }
-            onClick={() => setActive(2)}
-          >
-            Collector Reviews
-          </h5>
-          {active === 2 ? (
-            <div className={`${styles.active_indicator}`} />
-          ) : null}
-        </div>
-        <div className="relative">
-          <h5
-            className={
-              "text-[#000] text-[18px] px-1 leading-5 font-[600] cursor-pointer 800px:text-[20px]"
-            }
-            onClick={() => setActive(3)}
-          >
-            Collector Information
-          </h5>
-          {active === 3 ? (
-            <div className={`${styles.active_indicator}`} />
-          ) : null}
-        </div>
       </div>
       {active === 1 ? (
         <>
@@ -398,4 +356,4 @@ const ProductDetailsInfo = ({
   );
 };
 
-export default ProductDetails;
+export default EventDetails;

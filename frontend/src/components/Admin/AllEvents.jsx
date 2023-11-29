@@ -15,33 +15,29 @@ const AllEvents = () => {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "Product Id", minWidth: 150, flex: 0.7 },
     {
       field: "name",
       headerName: "Name",
       minWidth: 180,
-      flex: 1.4,
+      flex: 1.0,
     },
     {
-      field: "price",
-      headerName: "Price",
-      minWidth: 100,
-      flex: 0.6,
+      field: "description",
+      headerName: "Description",
+      minWidth: 180,
+      flex: 1.0,
     },
     {
-      field: "Stock",
-      headerName: "Stock",
-      type: "number",
+      field: "category",
+      headerName: "Category",
       minWidth: 80,
-      flex: 0.5,
+      flex: 1.0,
     },
-
     {
-      field: "sold",
-      headerName: "Sold out",
-      type: "number",
-      minWidth: 130,
-      flex: 0.6,
+      field: "tags",
+      headerName: "Tags",
+      minWidth: 100,
+      flex: 0.8,
     },
     {
       field: "Preview",
@@ -71,9 +67,9 @@ const AllEvents = () => {
       row.push({
         id: item._id,
         name: item.name,
-        price: "US$ " + item.discountPrice,
-        Stock: item.stock,
-        sold: item.sold_out,
+        description: item.description,
+        category: item.category,
+        tags: item.tags,
       });
     });
 

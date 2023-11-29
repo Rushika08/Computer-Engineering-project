@@ -6,10 +6,13 @@ import ProductsPage from "../pages/ProductsPage";
 import BestSellingPage from "../pages/BestSellingPage";
 import EventsPage from "../pages/EventsPage";
 import FAQPage from "../pages/FAQPage";
+import AboutUs from "../pages/AboutUs";
+import LearnPage from "../pages/LearnPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import PaymentPage from "../pages/PaymentPage";
 import OrderSuccessPage from "../pages/OrderSuccessPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
+import EventDetailsPage from "../pages/EventDetailsPage";
 import ProfilePage from "../pages/ProfilePage";
 import ShopCreatePage from "../pages/ShopCreate";
 import SellerActivationPage from "../pages/SellerActivationPage";
@@ -27,10 +30,13 @@ export {
     BestSellingPage,
     EventsPage,
     FAQPage,
+	AboutUs,
+    LearnPage,
     CheckoutPage,
     PaymentPage,
     OrderSuccessPage,
     ProductDetailsPage,
+    EventDetailsPage,
     ProfilePage,
     ShopCreatePage,
     SellerActivationPage,

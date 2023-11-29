@@ -72,16 +72,16 @@ const shopSchema = new mongoose.Schema({
       },
     },
   ],
+
   createdAt: {
     type: Date,
     default: Date.now(),
   },
-
-  
-  //collectingPointsMap: {
-  //  type: string,
-  //  default: 0,
-  //},
+ 
+  // collectingPointsMap: {
+  //   type: string,
+  //   default: 0,
+  // },
 
   resetPasswordToken: String,
   resetPasswordTime: Date,
