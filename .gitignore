@@ -1,5 +1,4 @@
 # dependencies
-backend/config/.env
 frontend/node_modules
 backend/node_modules
 socket/node_modules
@@ -9,16 +8,11 @@ node_modules/
 
 # Express.js
 dist/
-.env
 
 # React
 /build
 /dist
 /node_modules
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 # MongoDB
 *.db

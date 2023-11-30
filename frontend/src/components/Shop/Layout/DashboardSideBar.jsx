@@ -10,7 +10,6 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
 import { MdOutlineAddLocationAlt } from "react-icons/md";
 
-
 const DashboardSideBar = ({ active }) => {
   return (
     <div className="w-full h-[90vh] bg-white shadow-sm overflow-y-scroll sticky top-0 left-0 z-10">
@@ -30,25 +29,7 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-      
-      {/*
-      <div className="w-full flex items-center p-4">
-        <Link to="/dashboard-orders" className="w-full flex items-center">
-          <FiShoppingBag
-            size={30}
-            color={`${active === 2 ? "crimson" : "#555"}`}
-          />
-          <h5
-            className={`hidden 800px:block pl-2 text-[18px] font-[400] ${
-              active === 2 ? "text-[crimson]" : "text-[#555]"
-            }`}
-          >
-            All Orders
-          </h5>
-        </Link>
-      </div>
-      */}
-      
+
       <div className="w-full flex items-center p-4">
         <Link to="/dashboard-products" className="w-full flex items-center">
           <FiPackage size={30} color={`${active === 3 ? "crimson" : "#555"}`} />
@@ -112,7 +93,7 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-      
+
       <div className="w-full flex items-center p-4">
         <Link to="/dashboard-messages" className="w-full flex items-center">
           <BiMessageSquareDetail
@@ -128,24 +109,6 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-      
-      {/*
-      <div className="w-full flex items-center p-4">
-        <Link to="/dashboard-coupouns" className="w-full flex items-center">
-          <AiOutlineGift
-            size={30}
-            color={`${active === 8 ? "crimson" : "#555"}`}
-          />
-          <h5
-            className={`hidden 800px:block pl-2 text-[18px] font-[400] ${
-              active === 8 ? "text-[crimson]" : "text-[#555]"
-            }`}
-          >
-            Offer Coupouns
-          </h5>
-        </Link>
-      </div>
-      */}
 
       <div className="w-full flex items-center p-4">
         <Link to className="w-full flex items-center">
