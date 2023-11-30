@@ -28,23 +28,7 @@ const AdminSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-
-      <div className="w-full flex items-center p-4">
-        <Link to="/admin-orders" className="w-full flex items-center">
-          <FiShoppingBag
-            size={30}
-            color={`${active === 2 ? "crimson" : "#555"}`}
-          />
-          <h5
-            className={`hidden 800px:block pl-2 text-[18px] font-[400] ${
-              active === 2 ? "text-[crimson]" : "text-[#555]"
-            }`}
-          >
-            All Transactions
-          </h5>
-        </Link>
-      </div>
-
+      
       <div className="w-full flex items-center p-4">
         <Link to="/admin-sellers" className="w-full flex items-center">
           <GrWorkshop
@@ -108,27 +92,6 @@ const AdminSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-
-
-
-      {/*<div className="w-full flex items-center p-4">
-        <Link
-          to="/admin-withdraw-request"
-          className="w-full flex items-center"
-        >
-          <CiMoneyBill
-            size={30}
-            color={`${active === 7 ? "crimson" : "#555"}`}
-          />
-          <h5
-            className={`hidden 800px:block pl-2 text-[18px] font-[400] ${
-              active === 7 ? "text-[crimson]" : "text-[#555]"
-            }`}
-          >
-            Withdraw Request
-          </h5>
-        </Link>
-          </div>*/}
 
       <div className="w-full flex items-center p-4">
         <Link

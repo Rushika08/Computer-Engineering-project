@@ -39,19 +39,13 @@ const AllProducts = () => {
     },
     {
       field: "Stock",
-      headerName: "Stock",
+      headerName: "Quantity expected",
       type: "number",
       minWidth: 80,
       flex: 0.5,
     },
 
-    {
-      field: "sold",
-      headerName: "Sold out",
-      type: "number",
-      minWidth: 130,
-      flex: 0.6,
-    },
+    
     {
       field: "Preview",
       flex: 0.8,
@@ -97,7 +91,7 @@ const AllProducts = () => {
       row.push({
         id: item._id,
         name: item.name,
-        price: "US$ " + item.discountPrice,
+        price: "LKR " + item.discountPrice,
         Stock: item.stock,
         sold: item?.sold_out,
       });

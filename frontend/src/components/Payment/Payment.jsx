@@ -34,9 +34,9 @@ const Payment = () => {
       .create({
         purchase_units: [
           {
-            description: "Sunflower",
+            description: "###",
             amount: {
-              currency_code: "USD",
+              currency_code: "LKR",
               value: orderData?.totalPrice,
             },
           },

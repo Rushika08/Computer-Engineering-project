@@ -26,31 +26,6 @@ const ProductDetailsCard = ({ setOpen, data }) => {
 
   const handleMessageSubmit = () => {};
 
-  const decrementCount = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
-
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
-
-  const addToCartHandler = (id) => {
-    const isItemExists = cart && cart.find((i) => i._id === id);
-    if (isItemExists) {
-      toast.error("Item already in cart!");
-    } else {
-      if (data.stock < count) {
-        toast.error("Product stock limited!");
-      } else {
-        const cartData = { ...data, qty: count };
-        dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
-      }
-    }
-  };
-
   useEffect(() => {
     if (wishlist && wishlist.find((i) => i._id === data._id)) {
       setClick(true);
@@ -124,6 +99,8 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                   </h3>
                 </div>
                 <div className="flex items-center mt-12 justify-between pr-3">
+                  
+                  {/*
                   <div>
                     <button
                       className="bg-gradient-to-r from-teal-400 to-teal-500 text-white font-bold rounded-l px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out"
@@ -141,6 +118,8 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                       +
                     </button>
                   </div>
+                  */}
+                  
                   <div>
                     {click ? (
                       <AiFillHeart
@@ -160,6 +139,8 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                     )}
                   </div>
                 </div>
+                
+                {/*}
                 <div
                   className={`${styles.button} mt-6 rounded-[4px] h-11 flex items-center`}
                   onClick={() => addToCartHandler(data._id)}
@@ -168,6 +149,7 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                     Add to cart <AiOutlineShoppingCart className="ml-1" />
                   </span>
                 </div>
+                */}
               </div>
             </div>
           </div>

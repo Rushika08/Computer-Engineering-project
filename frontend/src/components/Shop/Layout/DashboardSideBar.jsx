@@ -30,7 +30,8 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-
+      
+      {/*
       <div className="w-full flex items-center p-4">
         <Link to="/dashboard-orders" className="w-full flex items-center">
           <FiShoppingBag
@@ -46,7 +47,8 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-
+      */}
+      
       <div className="w-full flex items-center p-4">
         <Link to="/dashboard-products" className="w-full flex items-center">
           <FiPackage size={30} color={`${active === 3 ? "crimson" : "#555"}`} />
@@ -126,7 +128,8 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
-
+      
+      {/*
       <div className="w-full flex items-center p-4">
         <Link to="/dashboard-coupouns" className="w-full flex items-center">
           <AiOutlineGift
@@ -142,6 +145,7 @@ const DashboardSideBar = ({ active }) => {
           </h5>
         </Link>
       </div>
+      */}
 
       <div className="w-full flex items-center p-4">
         <Link to className="w-full flex items-center">
